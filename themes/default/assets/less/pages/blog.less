@@ -1,0 +1,188 @@
+#Blog {
+  background-color: #F5F6F9;
+  > .container {
+    padding-top: 0;
+    > .Page-title {
+      font-size: 90px;
+      padding-top: @Base-number*4;
+      line-height: 110px;
+      margin-bottom: 0;
+    }
+    > .Page-subtitle {
+      font-size: 22px;
+      margin-bottom: @Base-number*6;
+    }
+  }
+
+  .Blog-container {
+    .Post-item {
+      background-color: @Site-color-0;
+      a {
+        color: inherit;
+        &:hover, &:focus {
+          text-decoration: none;
+        }
+      }
+      img {
+        width: 100%;
+      }
+    }
+
+    .Posts {
+      .Post-item {
+        margin-bottom: @Base-number*6;
+        box-shadow: @Shadows;
+        .Post-image {
+          img {
+            width: 100%;
+          }
+        }
+        .Post-data {
+          padding: @Base-number*6;
+          .Post-title {
+            font-size: 24px;
+            text-transform: uppercase;
+          }
+          .Post-info {
+            font-size: 16px;
+            color: @Site-color-60;
+            margin-bottom: @Base-number*3;
+            .Author {
+              margin-right: @Base-number;
+              text-transform: uppercase;
+              font-size: 14px;
+            }
+          }
+          .Post-excerpt {
+            .Text {
+              color: @Site-color-50;
+              font-size: 16px;
+              font-family: 'Athiti', serif;
+            }
+          }
+        }
+      }
+    }
+
+    .Post {
+      .Post-item {
+        margin-bottom: @Base-number*6;
+        box-shadow: @Shadows;
+        .Post-image {
+          img {
+            width: 100%;
+          }
+        }
+        .Post-data {
+          padding: @Base-number*6;
+          .Post-title {
+            font-size: 34px;
+            text-transform: uppercase;
+          }
+          .Post-info {
+            font-size: 15px;
+            color: @Site-color-60;
+            .Author {
+              text-transform: uppercase;
+              font-size: 13px;
+            }
+            .Date {
+              margin-right: @Base-number;
+            }
+          }
+          .Post-excerpt {
+            .Text {
+              line-height: 160%;
+              color: @Site-color-50;
+              font-size: 17px;
+              font-family: 'Athiti', serif;
+              p,blockquote {
+                margin-bottom: @Base-number*2.5;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .Posts-sm {
+      background-color: @Site-color-0;
+      padding: @Base-number*2;
+      margin-bottom: @Base-number*6;
+      box-shadow: @Shadows;
+      .Title-box {
+        font-size: 14px;
+        text-transform: uppercase;
+        padding-top: @Base-number;
+        padding-bottom: @Base-number*2;
+        margin-bottom: @Base-number*3;
+        border-bottom: solid 1px @Site-color-5;
+      }
+      .Post-item {
+        background-color: transparent;
+        padding-bottom: @Base-number*2;
+        display: table;
+        width: 100%;
+        > a {
+          > div {
+            float: left;
+          }
+        }
+        .Post-image {
+          width: 35%;
+          img {
+            width: 100%;
+          }
+        }
+        .Post-data {
+          width: 65%;
+          font-size: 11px;
+          padding: @Base-number 0 0 @Base-number;
+          .Post-title {
+            margin-bottom: @Base-number*1.5;
+          }
+          .Post-info {
+            font-size: 9px;
+          }
+        }
+        &.Great {
+          > a {
+            > div {
+              width: 100%;
+              float: none;
+            }
+          }
+          .Post-data {
+            .Post-title {
+              margin-bottom: @Base-number*0.5;
+            }
+            .Post-info {
+              margin-bottom: @Base-number*2;
+            }
+          }
+        }
+      }
+      &.Categories {
+        .Title-box {
+          margin-bottom: 0;
+        }
+        .Category-item {
+          border-bottom: solid 1px @Site-color-5;
+          a {
+            display: block;
+            padding: @Base-number*2 0;
+            font-size: 14px;
+            color: @Site-color-40;
+            &:hover, &:focus {
+              text-decoration: none;
+            }
+          }
+          &:last-of-type {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+
+  }
+}

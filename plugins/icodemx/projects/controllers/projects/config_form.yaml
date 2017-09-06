@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Project
+
+# Model Form Field configuration
+form: $/icodemx/projects/models/project/fields.yaml
+
+# Model Class name
+modelClass: Icodemx\Projects\Models\Project
+
+# Default redirect location
+defaultRedirect: icodemx/projects/projects
+
+# Create page
+create:
+    title: Create Project
+    redirect: icodemx/projects/projects/update/:id
+    redirectClose: icodemx/projects/projects
+
+# Update page
+update:
+    title: Edit Project
+    redirect: icodemx/projects/projects
+    redirectClose: icodemx/projects/projects
+
+# Preview page
+preview:
+    title: Preview Project

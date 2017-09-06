@@ -1,0 +1,43 @@
+{% set destacado = __SELF__.destacado %}
+{% set posts = __SELF__.posts %}
+{% set recientes = __SELF__.recientes %}
+{% set populares = __SELF__.populares %}
+
+<div class="Blog-container row">
+    <div class="col-lg-9 col-md-8 col-sm-7">
+        <div class="Posts">
+            {% for post in posts %}
+            <!-- Posts normales  -->
+            <div class="Post-item">
+                <a href="/blog/post/{{ post.slug }}">
+                    <div class="Post-image">
+                        <!-- Crop de imagen 950x380 -->
+                        <img src="{{ post.principal_image.thumb(950,380,'crop') }}" alt=""/>
+                    </div>
+                    <div class="Post-data">
+                        <div class="Post-title">
+                            {{ post.title }}
+                        </div>
+                        <div class="Post-info">
+                            <span class="Author">
+                            {{ post.user.FullName }}
+                            </span>
+                            <span class="Date">
+                                {{ post.published_at|makeGodinez }}
+                            </span>
+                        </div>
+                        <div class="Post-excerpt">
+                            <!-- Límite de 280 carácteres -->
+                            <div class="Text">
+                                {{ limit(post.content_html,280)|striptags|raw }}
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+            <!-- Posts normales -->
+        </div>
+    </div>
+    {% component "Sidebar" %}
+</div>

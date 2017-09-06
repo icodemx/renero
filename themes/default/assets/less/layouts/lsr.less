@@ -1,0 +1,398 @@
+
+small {
+  font-size: 18px !important;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+header .logo img {
+  width: 250px;
+}
+
+#Header {
+  padding: 0 0 @Base-number*2;
+}
+
+.Section-cover {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  .navleft {
+    width: auto;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 130px 30px 130px 70px;
+    position: absolute;
+    height: 100%;
+    .navcontrol {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      margin-top: -30px;
+      i {
+        font-size: 22px;
+      }
+      a {
+        display: block;
+        padding: 15px;
+        color: #FFFFFF;
+      }
+    }
+    .navmenu {
+      list-style: none;
+      padding: 0;
+      display: none;
+      li {
+        margin-bottom: 15px;
+        font-size: 24px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding-right: 200px;
+        padding-left: 30px;
+        a {
+          color: inherit;
+        }
+      }
+    }
+    &.active {
+      .navmenu {
+        display: block;
+      }
+    }
+  }
+}
+
+
+
+section {
+  padding: 20px 0;
+  position: relative;
+}
+
+section .section_name {
+  font-size: 32px;
+  text-transform: uppercase;
+  padding: 10px 0;
+  border-bottom: solid 2px #797979;
+  margin-bottom: 10px;
+  color: #797979;
+}
+
+section .section_subname {
+  font-size: 32px;
+  text-transform: uppercase;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  color: #797979;
+}
+
+.modal-dialog.modal-lg {
+  width: 90%;
+}
+.modal-dialog.modal-lg .modal-body {
+  padding: 0;
+}
+.modal-dialog.modal-lg .modal-body .close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 40px;
+}
+.modal-dialog.modal-lg .modal-body img {
+  width: 100%;
+}
+
+.works {
+  padding-bottom: 60px;
+}
+
+.works .item {
+  margin-bottom: 15px;
+  position: relative;
+}
+.works .item .image {
+  position: relative;
+}
+.works .item .works_info {
+  position: absolute;
+  display: none;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 14px;
+  color: #ffffff;
+  background-color: rgba(0,0,0,0.5);
+  font-size: 20px;
+  font-weight: bold;
+}
+.works .item:hover .works_info {
+  display: block;
+}
+
+.works .vmore {
+  position: absolute;
+  bottom: 10px;
+  right: 0px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.content {
+  padding: 20px 0;
+}
+
+.content .name_reference {
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #797979;
+}
+
+.content .subname_reference {
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #B3B3B3;
+}
+
+.content .text_reference {
+  font-size: 18px;
+  color: #838383;
+}
+.content .text_reference small em {
+  font-style: normal;
+  color: #BBBBBB;
+}
+.content .book_reference {
+  font-size: 19px;
+  color: #838383;
+  margin-bottom: 28px;
+}
+.content .book_reference small em {
+  font-style: normal;
+}
+
+.about_card .text_about {
+  font-size: 18px;
+  color: #838383;
+}
+.about_card .text_about small{
+  font-size: 14px;
+  color: #BBBBBB;
+}
+.about_card .info_about {
+  font-size: 18px;
+  color: #838383;
+}
+
+.vmore.big {
+  font-size: 26px;
+  color: #EC6875;
+  text-align: right;
+}
+
+.awards_list {
+  padding: 0;
+  display: inline-table;
+  list-style: none;
+}
+
+.awards_list li {
+  font-size: 22px;
+  width: 50%;
+  padding: 5px 15px;
+  float: left;
+  color: #797979;
+}
+
+.awards_list li:before {
+  content: '\f111';
+  font-family: FontAwesome;
+  position: static;
+  font-size: 8px;
+}
+
+.form-contact .row > div:first-child {
+  padding-left: 0;
+}
+
+.form-contact .row > div:last-child {
+  padding-right: 0;
+}
+
+.form-contact .form-group {
+  margin-bottom: 20px;
+}
+
+.form-contact .form-group input {
+  font-size: 18px;
+  border: none;
+  border-bottom: solid 2px #797979;
+  border-radius: 0;
+  box-shadow: none;
+  color: #656565;
+}
+
+.form-contact .form-group textarea {
+  font-size: 18px;
+  border: solid 2px #797979;
+  border-radius: 0;
+  box-shadow: none;
+  color: #656565;
+}
+
+.form-contact .form-group label {
+  font-size: 18px;
+  font-weight: normal;
+  color: #656565;
+}
+
+.project_cover {
+  padding: 20px 0;
+}
+
+.project_card .name {
+  font-size: 38px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  line-height: 110%;
+}
+
+.project_card .subname {
+  font-size: 22px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.project_data .item {
+  font-size: 24px;
+  color: #666666;
+  margin-bottom: 10px;
+
+}
+
+.project_data .item.descrip {
+  font-size: 20px;
+}
+
+.project_data .item.descrip em {
+  font-size: 18px;
+  margin-top: 20px;
+  display: block;
+  color: #BBBBBB;
+  font-style: normal;
+}
+
+.project_prev_pic {
+  height: 230px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.project_prev_pic img {
+  min-height: 100% !important;
+}
+
+
+.sliderbooks {
+  border: solid 1px #eeeeee;
+  padding: 14px;
+}
+
+
+
+.sliderbooks .owl-controls {
+  position: static;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.sliderbooks .owl-controls .owl-dots {
+  position: relative;
+  bottom: 0;
+  padding: 14px;
+  width: 100%;
+  margin-top:14px;
+  text-align: center;
+}
+.sliderbooks .owl-controls .owl-dots .owl-dot {
+  display: inline-block;
+  -moz-user-select: none;
+  cursor: pointer;
+}
+.sliderbooks .owl-controls .owl-dots .owl-dot span {
+  background-color: #eeeeee;
+  border-radius: 50px;
+  display: block;
+  height: 15px;
+  margin: 0 5px;
+  transition: opacity 200ms ease 0s;
+  width: 15px;
+}
+.sliderbooks .owl-controls .owl-dots .owl-dot.active span {
+  background-color: #cccccc;
+}
+
+@media (max-width: 765px) {
+  header .navleft {
+    padding: 15px 0 0 70px;
+  }
+  header .navleft .navmenu li {
+    margin-bottom: 0px;
+    line-height: 100%;
+    margin-bottom: 4px;
+  }
+  header .navleft .navmenu li a {
+    font-size: 16px;
+    line-height: 100%;
+  }
+  .image_about {
+    margin-bottom: 40px;
+  }
+  .sliderbooks .item .name_reference {
+    font-size: 30px !important;
+  }
+  .sliderbooks .item .subname_reference {
+    font-size: 20px !important;
+    margin-bottom: 20px;
+  }
+  .sliderbooks .item .text_reference {
+    font-size: 16px !important;
+    text-align: justify;
+  }
+  .sliderbooks .item .row > div {
+    padding: 0 0px;
+  }
+
+
+  #section_project_cover .row > div  {
+    padding: 0;
+  }
+  .project_card .name {
+    font-size: 34px;
+  }
+  .project_card .subname {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  .project_data .item {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  .project_data .item.descrip {
+    margin-top: 30px;
+    text-align: justify;
+  }
+
+  #modal_prevpic .modal-body .close {
+    font-size: 30px;
+  }
+  #modal_prevpic .modal-body img {
+    width: 100%;
+  }
+}

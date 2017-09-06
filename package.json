@@ -1,0 +1,31 @@
+{
+  "name": "renero",
+  "version": "1.0.0",
+  "description": "Repositorio para el control de versiones del sitio sanchezrenero basado en Basic Blog",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pamatz/oc-blog.git"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "Diego Maruri, Román Pamatz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pamatz/oc-blog/issues"
+  },
+  "homepage": "https://github.com/pamatz/oc-blog#readme",
+  "dependencies": {
+    "laravel-elixir": "^5.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}

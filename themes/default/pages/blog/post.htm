@@ -1,0 +1,19 @@
+url = "/blog/post/:slug?"
+layout = "default"
+title = "Blog"
+
+[Post]
+slug = "{{ :slug }}"
+[Sidebar]
+==
+
+<div class="Page-content" id="Blog">
+    <div class="container">
+        <div class="Page-title">
+            Blog
+        </div>
+
+        {% component "Post" %}
+
+    </div>
+</div>

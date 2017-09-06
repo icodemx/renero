@@ -1,0 +1,95 @@
+{% set destacado = __SELF__.destacado %}
+{% set recientes = __SELF__.recientes %}
+{% set populares = __SELF__.populares %}
+<div class="col-lg-3 col-md-4 col-sm-5">
+    <div class="Posts-sm">
+        <div class="Title-box">
+            Destacado
+        </div>
+        {% if destacado %}
+        <!-- Posts destacado -->
+        <div class="Post-item Great">
+            <a href="/blog/post/{{ destacado.slug }}">
+                <div class="Post-image">
+                    <!-- Crop de imagen 280x180 -->
+                    <img src="{{ destacado.principal_image.thumb(280,180,'crop') }}" alt=""/>
+                </div>
+                <div class="Post-data">
+                    <div class="Post-title">
+                        {{ destacado.title }}
+                    </div>
+                    <div class="Post-info">
+                                <span class="Author">
+                                    {{ destacado.user.FullName }}
+                                </span>
+                        <span class="Date">
+                                    {{ destacado.published_at|makeGodinez }}
+                                </span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- Posts destacado  -->
+        {% endif %}
+
+
+        {% for popular in populares %}
+        <!-- Posts mas vistos  -->
+        <div class="Post-item">
+            <a href="/blog/post/{{ popular.slug }}">
+                <div class="Post-image">
+                    <!-- Crop de imagen 130x130 -->
+                    <img src="{{ popular.principal_image.thumb(130,130,'crop') }}" alt=""/>
+                </div>
+                <div class="Post-data">
+                    <div class="Post-title">
+                        {{ popular.title }}
+                    </div>
+                    <div class="Post-info">
+                                <span class="Author">
+                                    {{ popular.user.FullName }}
+                                </span>
+                        <span class="Date">
+                                    {{ popular.published_at|makeGodinez }}
+                                </span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- Posts mas vistos  -->
+        {% endfor %}
+
+    </div>
+
+    <div class="Posts-sm">
+        <div class="Title-box">
+            Recientes
+        </div>
+        {% for reciente in recientes %}
+        <!-- Posts recientes -->
+        <div class="Post-item">
+            <a href="/blog/post/{{ reciente.slug }}">
+                <div class="Post-image">
+                    <!-- Crop de imagen 130x130 -->
+                    <img src="{{ reciente.principal_image.thumb(130,130,'crop') }}" alt=""/>
+                </div>
+                <div class="Post-data">
+                    <div class="Post-title">
+                        {{ reciente.title }}
+                    </div>
+                    <div class="Post-info">
+                                <span class="Author">
+                                    {{ reciente.user.FullName }}
+                                </span>
+                        <span class="Date">
+                                   {{ reciente.published_at|makeGodinez }}
+                                </span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- Posts recientes -->
+        {% endfor %}
+    </div>
+
+</div>

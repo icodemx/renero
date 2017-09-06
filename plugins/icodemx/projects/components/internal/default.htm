@@ -1,0 +1,69 @@
+{% set project = __SELF__.project %}
+
+<div class="container">
+    <section class="section" id="section_project_cover">
+        <div class="row no-margin">
+            <div class="project_cover">
+                <img src="{{ project.cover.path }}" width="100%" height="auto"/>
+            </div>
+        </div>
+        <div class="row no-margin">
+            <div class="col-md-4">
+                <div class="project_card">
+                    <div class="name">
+                        {{ project.title }}
+                    </div>
+                    <div class="subname">
+                        {{ project.reference }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="project_data">
+                    <div class="item">
+                        Año: {{ project.date }}
+                    </div>
+                    <div class="item">
+                        Lugar: {{ project.location }}
+                    </div>
+                    <div class="item">
+                        Colaboración: {{ project.contribution }}
+                    </div>
+                    <div class="item descrip">
+                        {{ project.description }}
+                        <br/>
+                        <em>
+                            {{ project.description_alt }}
+
+                        </em>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="section_project_slider">
+        <div class="row no-margin">
+            {% for item in project.gallery %}
+            <div class="col-sm-4">
+                <div class="project_prev_pic">
+                    <img src="{{ item.thumb(300,200,'crop',{ extension: 'jpg'}) }}" data-path="{{ item.path }}" width="100%" height="auto"/>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</div>
+
+
+
+
+<div class="modal fade" id="modal_prevpic" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <img src="" id="img_toshow" />
+            </div>
+        </div>
+    </div>
+</div>

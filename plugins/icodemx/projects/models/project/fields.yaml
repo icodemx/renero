@@ -1,0 +1,50 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    title:
+        label: Nombre del projecto
+    slug:
+        label: URL amigable
+        preset:
+            field: title
+            type: slug
+    reference:
+        label: Referencia
+        span: left
+    date:
+        label: Fecha de cierre
+        span: right
+    location:
+        label: Ubicación
+    contribution:
+        label: Colaboración
+tabs:
+    fields:
+        description:
+            label: Descripción
+            type: textarea
+            tab: Información
+        description_alt:
+            label: Descripción (inglés)
+            type: textarea
+            tab: Información
+        cover:
+            label: Portada
+            type: fileupload
+            mode: image
+            span: left
+            tab: Media
+        gallery:
+            label: Galeria
+            type: fileupload
+            mode: image
+            span: right
+            tab: Media
+        external:
+            label: Imagen externa
+            type: fileupload
+            mode: image
+            span: left
+            tab: Media

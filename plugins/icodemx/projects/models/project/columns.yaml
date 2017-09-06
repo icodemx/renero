@@ -1,0 +1,14 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    title:
+        label: Nombre
+        searchable: true
+    date:
+        label: Fecha
+        searchable: true

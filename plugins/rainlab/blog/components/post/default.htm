@@ -1,0 +1,38 @@
+{% set post = __SELF__.post %}
+<div class="Blog-container row">
+    <div class="col-lg-9 col-md-8 col-sm-7">
+
+        <div class="Post">
+            <!-- Post actual  -->
+            <div class="Post-item">
+                <div class="Post-data">
+                    <div class="Post-title">
+                        {{ post.title }}
+                    </div>
+                    <div class="Post-info">
+                        <span class="Date">{{ post.published_at|makeGodinez }}</span>
+                        <span class="Author">{{ post.user.FullName }}</span>
+                    </div>
+                </div>
+                <div class="Post-image">
+                    <!-- Imagen sin crop -->
+                    <img src="{{ post.principal_image.getPath }}" alt=""/>
+                    <!-- Imagen sin crop -->
+                </div>
+                <div class="Post-data">
+                    <div class="Post-excerpt">
+                        <div class="Text">
+                            {{ post.content_html|raw }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Post actual -->
+        </div>
+
+        {% partial "panels/Panel-share" %}
+    </div>
+
+    {% component "Sidebar" %}
+
+</div>
