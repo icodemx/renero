@@ -12,3 +12,6 @@ columns:
     date:
         label: Fecha
         searchable: true
+    slug:
+        label: URL
+        searchable: false
