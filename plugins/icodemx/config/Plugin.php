@@ -2,6 +2,7 @@
 
 use Backend;
 use System\Classes\PluginBase;
+use BackendMenu;
 
 /**
  * Config Plugin Information File
@@ -40,7 +41,10 @@ class Plugin extends PluginBase
      */
     public function boot()
     {
-
+        BackendMenu::registerCallback(function ($manager) {
+            $manager->removeMainMenuItem('October.Cms','cms');
+            $manager->removeMainMenuItem('October.Cms','media');
+        });
     }
 
     /**
