@@ -2,3 +2,6 @@
 1.0.2:
         - Table projects creation
         - create_projects_table.php
+1.0.3:
+        - Update projects table adding typehomepiczise
+        - update_projects_table_typecover.php

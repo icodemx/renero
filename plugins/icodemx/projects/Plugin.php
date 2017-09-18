@@ -52,6 +52,7 @@ class Plugin extends PluginBase
     {
         return [
             'Icodemx\Projects\Components\Internal' => 'Project',
+            'Icodemx\Projects\Components\ProjectsHome' => 'ProjectsHome',
         ];
     }
 

@@ -42,6 +42,15 @@ tabs:
             mode: image
             span: right
             tab: Media
+        typecover:
+            label: Tipo de imagen externa
+            type: dropdown
+            tab: Media
+            span: left
+            options:
+                1: Cuadrado
+                2: Vertical
+                3: Horizontal
         external:
             label: Imagen externa
             type: fileupload
