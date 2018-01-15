@@ -3,7 +3,7 @@
 use Schema;
 use October\Rain\Database\Updates\Migration;
 
-class CreateProjectsTable extends Migration
+class UpdateProjectsTable extends Migration
 {
     public function up()
     {
