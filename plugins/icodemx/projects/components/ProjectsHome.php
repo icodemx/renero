@@ -22,6 +22,6 @@ class ProjectsHome extends ComponentBase
 
     public function init()
     {
-        $this->projects = Project::where('id','>', 31)->remember(config('cache.eloquent'))->get();
+        $this->projects = Project::remember(config('cache.eloquent'))->get();
     }
 }
