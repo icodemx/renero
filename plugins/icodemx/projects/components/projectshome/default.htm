@@ -4,7 +4,7 @@
     {% for item in projects %}
     {% if item.typecover == 1 %}
     <div class="item col-sm-4">
-        <a href="/proyectos/casa-las-garzas">
+        <a href="/proyectos/{{ item.slug }}">
             <div class="image">
                 <span class="works_info">{{ item.title }}</span>
                 <img src="{{ item.external.thumb(400,400,'crop',{ extension: 'jpg'}) }}" width="100%"/>
@@ -16,7 +16,7 @@
     </div>
     {% elseif item.typecover == 2 %}
     <div class="item col-sm-4">
-        <a href="/proyectos/casa-las-garzas">
+        <a href="/proyectos/{{ item.slug }}">
             <div class="image">
                 <span class="works_info">{{ item.title }}</span>
                 <img src="{{ item.external.thumb(400,820,'crop',{ extension: 'jpg'}) }}" width="100%"/>
@@ -28,7 +28,7 @@
     </div>
     {% elseif item.typecover == 3 %}
     <div class="item col-sm-8">
-        <a href="/proyectos/casa-las-garzas">
+        <a href="/proyectos/{{ item.slug }}">
             <div class="image">
                 <span class="works_info">{{ item.title }}</span>
                 <img src="{{ item.external.thumb(820,400,'crop',{ extension: 'jpg'}) }}" width="100%"/>
