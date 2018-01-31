@@ -43,7 +43,11 @@ secondaryTabs:
             label: rainlab.blog::lang.post.published
             span: left
             type: checkbox
-
+        destacado:
+            tab: rainlab.blog::lang.post.tab_manage
+            label: Post destacado
+            span: left
+            type: checkbox
         published_at:
             tab: rainlab.blog::lang.post.tab_manage
             label: rainlab.blog::lang.post.published_on
