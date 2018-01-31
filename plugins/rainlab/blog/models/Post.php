@@ -73,6 +73,10 @@ class Post extends Model
         'user' => ['Backend\Models\User']
     ];
 
+    public $attachOne = [
+        'principal_image' => ['System\Models\File']
+    ];
+
     public $belongsToMany = [
         'categories' => [
             'RainLab\Blog\Models\Category',

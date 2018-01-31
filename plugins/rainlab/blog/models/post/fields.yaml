@@ -62,6 +62,12 @@ secondaryTabs:
             type: textarea
             size: small
 
+        principal_image:
+            tab: rainlab.blog::lang.post.tab_manage
+            label: Imagen principal
+            type: fileupload
+            mode: image
+
         featured_images:
             tab: rainlab.blog::lang.post.tab_manage
             label: rainlab.blog::lang.post.featured_images

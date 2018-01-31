@@ -27,6 +27,20 @@
                     </div>
                 </div>
             </div>
+
+            <div class="Post-item">
+                <div class="Post-data">
+                    <div class="Gallery row">
+                        {% for image in post.featured_images %}
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                            <div class="project_prev_pic blog">
+                                <img src="{{ image.thumb(200,150,'crop',{ extension: 'jpg'}) }}" data-path="{{ image.path }}" width="100%" height="auto" alt="">
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
             <!-- Post actual -->
         </div>
 
@@ -35,4 +49,15 @@
 
     {% component "Sidebar" %}
 
+</div>
+
+<div class="modal fade" id="modal_prevpic" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <img src="" id="img_toshow" />
+            </div>
+        </div>
+    </div>
 </div>
