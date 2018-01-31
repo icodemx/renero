@@ -29,6 +29,10 @@ class Sidebar extends ComponentBase
     {
         $this->destacado = Posts::IsPublished()->where('destacado', true)->first();
         $this->recientes = Posts::IsPublished()->orderBy('published_at')->limit(4)->get();
-        $this->populares = Posts::IsPublished()->orderBy('visits')->limit(3)->get();
+        if ($this->destacado != null){
+            $this->populares = Posts::IsPublished()->orderBy('visits')->limit(3)->where('id','!=',$this->destacado['id'])->get();
+        } else {
+            $this->populares = Posts::IsPublished()->orderBy('visits')->limit(3)->get();
+        }
     }
 }
