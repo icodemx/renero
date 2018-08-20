@@ -5,3 +5,6 @@
 1.0.3:
         - Update projects table adding typehomepiczise
         - update_projects_table_typecover.php
+1.0.4:
+        - Update projects table adding order
+        - update_projects_table_order.php
