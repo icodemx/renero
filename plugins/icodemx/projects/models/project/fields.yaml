@@ -20,6 +20,10 @@ fields:
         label: Ubicación
     contribution:
         label: Colaboración
+        span: left
+    order:
+        label: Ordenamiento
+        span: right
 tabs:
     fields:
         description:

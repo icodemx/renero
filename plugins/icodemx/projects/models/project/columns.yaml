@@ -6,6 +6,9 @@ columns:
     id:
         label: ID
         searchable: true
+    order:
+        label: Ordenamiento
+        searchable: true
     title:
         label: Nombre
         searchable: true

@@ -22,6 +22,6 @@ class ProjectsHome extends ComponentBase
 
     public function init()
     {
-        $this->projects = Project::orderBy('id','desc')->remember(config('cache.eloquent'))->get();
+        $this->projects = Project::orderBy('order','desc')->remember(config('cache.eloquent'))->get();
     }
 }
